@@ -7,15 +7,24 @@ Should the polyfill take over here ?
 
 # Outcome
 
-Chrome hides the node children successfully, Firefox does not:
+Chrome hides the node children successfully, Firefox does not with code like this:
+
+```html
+
+  We're hiding DOM children through slot here:
+  <my-component>
+    <p>What !???</p>
+  </my-component>
+  
+```
 
 ![](https://raw.githubusercontent.com/bitflower/stencil-slot-test/master/preview.png)
 
-# How ro run
+# How to run
 
 `npm run dev --es5`
 
-# Fallback for browser
+# Fallback for old browser
 
 We still can hide the children with a fallback solution sketch out in the code (commented) with something like this:
 
