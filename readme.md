@@ -27,7 +27,8 @@ Chrome hides the node children successfully, Firefox does not with code like thi
 # Shadow dom off
 
 With shadowm dom off it doesn't event work in Chrome anymore:
-![](https://raw.githubusercontent.com/bitflower/stencil-slot-test/master/err1.png)
+
+![](https://raw.githubusercontent.com/bitflower/stencil-slot-test/master/err.png)
 
 # Fallback for old browser
 
