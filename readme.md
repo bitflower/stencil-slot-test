@@ -8,7 +8,8 @@ Should the polyfill take over here ?
 # Outcome
 
 Chrome hides the node children successfully, Firefox does not:
-![]()
+
+![](https://raw.githubusercontent.com/bitflower/stencil-slot-test/master/preview.png)
 
 # How ro run
 
