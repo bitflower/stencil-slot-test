@@ -7,17 +7,30 @@ import { Component, State } from '@stencil/core';
 })
 export class MyComponent {
 
+  // @Element()
+  // private el: HTMLStencilElement;
+
   @State() allowed: boolean;
 
   componentWillLoad(): void {
-    this.allowed = true;
+    this.allowed = false;
+
+    // // Fallback for browsers not supporting shadow DOM
+    // const CAN_SHADOW: boolean = !!(document.head.attachShadow || (document.head as any).createShadowRoot);
+
+    // if (CAN_SHADOW === false && this.allowed === false) {
+    //   while (this.el.lastChild) {
+    //     this.el.removeChild(this.el.lastChild);
+    //   }
+    // }
   }
 
   render() {
-    return (
-      <div>
-        {this.allowed ? <slot /> : null}
-      </div>
-    );
+    return this.allowed ? <slot /> : null;
+    // return (
+    //   <div>
+    //     {this.allowed ? <slot /> : null}
+    //   </div>
+    // );
   }
 }
